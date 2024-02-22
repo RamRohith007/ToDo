@@ -1,0 +1,103 @@
+body{
+    background-color: whitesmoke;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 35px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#maincontainer{
+    max-width: 650px;
+    margin : auto;
+    background-color: #fff;
+    -web-kit-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+    border-radius: 5px;
+    padding: 2px;
+}
+#headerbardiv{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    background: #ad5389;
+    background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);
+    background: linear-gradient(to bottom, #3c1053, #ad5389); 
+}
+
+.task-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffff;
+    border-top: 1px solid rgb(226,226,226);
+}
+
+.task-title{
+    display: flex;
+}
+
+.task-title a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #4b5156;
+}
+.task-complete-icon{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(105,192,105);
+    border-radius: 50%;
+}
+.task-incomplete-icon{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(218,218,218);
+    border-radius: 50%;
+}
+.delete-link{
+    text-decoration: none;
+    font-weight: 900;
+    color: red;
+    font-size: 22px;
+    line-height: 0;
+}
+
+#searchbardiv{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 12px;
+    border-radius: 5px 5px 0 0;
+}
+#search-add-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffff;
+}
+
+#search-form{
+    display: flex;
+}
+
+#add-link{
+    text-decoration: none;
+    color: whitesmoke;
+    align-items: center;
+}
+
+#add-link strong{
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(16, 254, 16);
+    font-size: 22px;
+    line-height: 0;
+}
+

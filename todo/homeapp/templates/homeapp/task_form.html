@@ -1,0 +1,26 @@
+{% extends "homeapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="header-bar" id="headerbardiv" style="padding:15px;">
+    <a href="{% url 'tasks' %}" id:"backbutton" style="text-decoration:none; color:white;"><h6><i class="fa fa-reply"></i>&nbsp; Back</h6></a>
+<br>
+</div>
+<div class="container">
+<form method="POST">{% csrf_token %}
+    <br>
+    {{form.title|as_crispy_field}}
+    <br>
+    {{form.description|as_crispy_field}}
+    <br>
+    {{form.complete|as_crispy_field}}
+    <br>
+    <button class="btn btn-success" type="sumbit" style="width:150px">Submit &nbsp;<i class="fa fa-check"></i></button>
+    <br>
+<form>
+    <br>
+</div>
+
+{% endblock content %}

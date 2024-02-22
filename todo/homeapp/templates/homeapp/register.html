@@ -1,0 +1,30 @@
+{% extends "homeapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="header-bar" id="headerbardiv">
+    <h1>ToDo</h1>
+</div>
+<br>
+<div class="container">
+<h3>Register...</h3>
+<hr>
+<div class="container">
+    <form method="POST">{% csrf_token %}
+        {{form.username|as_crispy_field}}
+        <br>
+        {{form.password1|as_crispy_field}}
+        <br>
+        {{form.password2|as_crispy_field}}
+        <br>
+        <button class="btn btn-primary w-100 btn-block p-2" type="sumbit">Create Account &nbsp;<i class="fa fa-user"></i></button>
+    </form>
+    <hr>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    <br>
+</div>
+</div>
+
+{% endblock content %}

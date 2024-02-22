@@ -1,0 +1,46 @@
+{% extends "homeapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="header-bar" id="headerbardiv">
+    <h1>ToDo</h1>
+</div>
+<div class="container">
+<br>
+<h3>Login...</h3>
+<hr>
+<div class="container">
+    <form method="POST">{% csrf_token %}
+        {{form.username|as_crispy_field}}
+        <br>
+        {{form.password|as_crispy_field}}
+        <br>
+        <button class="btn btn-primary w-100" type="sumbit">Login &nbsp;<i class="fa fa-key"></i></button>
+    </form>
+    <hr>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    <br>
+</div>
+</div>
+
+{% endblock content %}
+
+{% comment %} 
+{% extends "homeapp/base.html" %}
+
+{% block content %}
+
+<h1>ToDo</h1>
+<hr>
+<br>
+<h3>Login</h3>
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login">
+</form>
+<hr>
+<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+
+{% endblock content %} {% endcomment %}

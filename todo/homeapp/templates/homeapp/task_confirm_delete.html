@@ -1,0 +1,24 @@
+{% extends "homeapp/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="header-bar" id="headerbardiv" style="padding:15px;">
+    <a href="{% url 'tasks' %}" id:"backbutton" style="text-decoration:none; color:white;"><h6><i class="fa fa-reply"></i>&nbsp; Back</h6></a>
+<br>
+</div>
+<div class="container">
+<br>
+<div class="card-body">
+    <h5>Are you sure you want to delete the task? <strong>"{{task}}"</strong></h5>
+    <form method="POST">{% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <button class="btn btn-danger" type="sumbit" style="width:150px">Delete &nbsp;<i class="fa fa-remove"></i></button>
+    </form>
+    <br>
+</div>
+</div>
+
+{% endblock content %}
